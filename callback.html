@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connecting TikTok</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Connecting TikTok…</h1><p id="m" class="muted">Handing the authorization back to Simply AI Studio on this computer.</p>
+<script>
+// Simply AI Studio's sign-in listens on this computer only; the code goes nowhere else.
+var q = location.search;
+if (/[?&](code|error)=/.test(q)) { location.replace("http://127.0.0.1:8723/callback" + q); }
+else { document.getElementById("m").textContent = "Nothing to hand back."; }
+</script>
+</main></body></html>
